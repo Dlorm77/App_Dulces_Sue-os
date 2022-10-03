@@ -2,6 +2,7 @@ from App_Dulces_sueños.models.categoria import Categoria
 from rest_framework import serializers
 
 class CategoriaSerializer(serializers.ModelSerializer):
+    
         class Meta:
             model = Categoria
             fields = ['ID', 'Articulo']

@@ -1,10 +1,10 @@
-from ast import Delete
 from rest_framework import status, views
 from rest_framework.response import Response
 from App_Dulces_sueños.Serializers.categoriaSerializer import CategoriaSerializer
 from App_Dulces_sueños.models.categoria import Categoria
 
 class CategoriaView(views.APIView):
+    
     def post(self, request, *args, **kwargs):
         serializer = CategoriaSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
