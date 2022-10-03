@@ -10,7 +10,7 @@ from App_Dulces_sueños.Serializers.userSerializer import UserSerializer
 class UserDetailView(generics.RetrieveAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
-    permission_classes = (IsAuthenticated,)
+    permission_classes = (IsAuthenticated)
 
     def get(self, request, *args, **kwargs):
 
