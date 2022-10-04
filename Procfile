@@ -1,1 +1,1 @@
-web: gunicorn App_Dulces_sueños.wsgi
+web: gunicorn Dulces_Sueños.wsgi
