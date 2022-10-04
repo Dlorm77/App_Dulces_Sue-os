@@ -9,9 +9,11 @@ https://docs.djangoproject.com/en/4.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
+import django_heroku
 
 from pathlib import Path
 from datetime import timedelta
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -119,12 +121,12 @@ WSGI_APPLICATION = 'Dulces_Sueños.wsgi.application'
 
 DATABASES = {
     'default': {  
-        'ENGINE': 'django.db.backends.mysql',  
-        'NAME': 'DulcesSueños',  
-        'USER': 'root',  
-        'PASSWORD': '2965',  
-        'HOST': 'localhost',  
-        'PORT': '3306', 
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',  
+        'NAME': 'd2uqm39dfrjusi',  
+        'USER': 'nrrsgywlssbojf',  
+        'PASSWORD': 'f34aa1734cdfc9c6a7e4482258262d754f1b3dee211bfe400423eb89574f366d',  
+        'HOST': 'ec2-52-200-5-135.compute-1.amazonaws.com',  
+        'PORT': '5432', 
     }
 }
 
@@ -169,3 +171,5 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+django_heroku.settings(locals())
